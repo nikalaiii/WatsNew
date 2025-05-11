@@ -55,7 +55,7 @@ const blocks = [
 .hero {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Quicksand", sans-serif;
   display: flex;
   align-items: center;

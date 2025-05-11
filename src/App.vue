@@ -1,11 +1,15 @@
 <script setup>
   import Header from './components/Header.vue'
   import Weather from './components/Weather.vue'
+  import Finance from './components/Finance.vue';
+import News from './components/News.vue';
 </script>
 
 <template>
   <Header></Header>
+  <News></News>
   <Weather></Weather>
+  <Finance></Finance>
 </template>
 
 <style lang="scss">

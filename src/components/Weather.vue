@@ -78,9 +78,9 @@ async function handleSubmit() {
     loading.value = true;
     error.value = null;
 
-    const urlBuild = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&units=metric&appid=db98d9e09b3aae9554d3c2687fad11b3`;
+    const urlBuild = `https://api.openweathermap.org/data/2.5/weather?q=db98d9e09b3aae9554d3c2687fad11b3&units=metric&appid=db98d9e09b3aae9554d3c2687fad11b3`;
 
-    const data = await getDataApi("weather", urlBuild);
+    const data = await getDataApi(urlBuild);
 
     if (!data) {
       error.value =
@@ -116,16 +116,16 @@ function findImage() {
 
   switch (info.value.weather[0].main) {
     case 'Clear':
-      return '../../public/images/sun.png';
+      return "images/sun.png";
     case 'Clouds':
-      return '../../public/images/sun-cloud.png';
+      return 'images/sun-cloud.png';
     case "Rain":
     case "Drizzle":
     case "Thunderstorm":
-      return '../../public/images/rain.png'
+      return 'images/rain.png'
 
     default:
-      return '../../public/images/sun.png';
+      return 'images/sun.png';
   }
 }
 
