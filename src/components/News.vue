@@ -18,7 +18,7 @@ onMounted(async () => {
     error.value = null;
     loading.value = true;
     const newData = await getDataApi(
-      "https://newsapi.org/v2/top-headlines?country=us&apiKey=6b53b2feb7634deda362aaee48c5cd6e"
+      "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=us&apiKey=6b53b2feb7634deda362aaee48c5cd6e"
     );
 
     if (!newData) {
@@ -129,7 +129,7 @@ const scrollCarousel = (direction = "right") => {
     flex-direction: row;
     gap: 1rem;
 
-     @media (max-width: 768px) {
+    @media (max-width: 768px) {
       width: 40%;
     }
   }
