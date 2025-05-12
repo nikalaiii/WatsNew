@@ -18,7 +18,7 @@ onMounted(async () => {
     error.value = null;
     loading.value = true;
     const newData = await getDataApi(
-      "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=us&apiKey=6b53b2feb7634deda362aaee48c5cd6e"
+      "https://floral-meadow-aa7a.mikalaj-krutak.workers.dev/?source=news&country=us"
     );
 
     if (!newData) {

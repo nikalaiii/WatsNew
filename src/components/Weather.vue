@@ -78,7 +78,7 @@ async function handleSubmit() {
     loading.value = true;
     error.value = null;
 
-    const urlBuild = `https://api.openweathermap.org/data/2.5/weather?q=db98d9e09b3aae9554d3c2687fad11b3&units=metric&appid=db98d9e09b3aae9554d3c2687fad11b3`;
+    const urlBuild = `https://floral-meadow-aa7a.mikalaj-krutak.workers.dev/?source=weather&q=${inputValue.value}&units=metric`;
 
     const data = await getDataApi(urlBuild);
 
@@ -140,6 +140,10 @@ watch(error, (newVal) => {
 const handleClose = () => {
   error.value = null;
 }
+
+watch(() => {
+  console.log(`input value: ${inputValue.value}`)
+})
 </script>
 
 <template>
